@@ -1,7 +1,5 @@
 # Examen JS – Pokédex Quiz
 
-Este examen replica la estructura de `Examen-JS-Billetera-Virtual` pero con temática Pokémon y uso de PokéAPI.
-
 ## Objetivo
 Construir un mini-quiz: “¿Quién es ese Pokémon?” que:
 - Obtenga un Pokémon aleatorio por generación desde PokéAPI.
