@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen JS - Pokédex Quiz</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.cdnfonts.com/css/pokemon-solid"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="pokedex-container">
+      <header>
+        <h1>Poké-Quiz</h1>
+        <div class="score">
+          <span>Puntaje</span>
+          <div class="score-container">
+            <h2 id="score">0</h2>
+            <select id="generationSelector" class="generation-select">
+              <option value="1">Gen I</option>
+              <option value="2">Gen II</option>
+              <option value="3">Gen III</option>
+              <option value="4">Gen IV</option>
+              <option value="5">Gen V</option>
+              <option value="6">Gen VI</option>
+              <option value="7">Gen VII</option>
+              <option value="8">Gen VIII</option>
+              <option value="9">Gen IX</option>
+            </select>
+          </div>
+        </div>
+      </header>
+
+      <section class="actions">
+        <button id="btnNuevo">
+          <i class="fas fa-bolt"></i>
+          Nuevo Pokémon
+        </button>
+        <button id="btnPista">
+          <i class="fas fa-lightbulb"></i>
+          Pista
+        </button>
+        <button id="btnHistorial">
+          <i class="fas fa-history"></i>
+          Historial
+        </button>
+      </section>
+
+      <section class="quiz" id="quizSection">
+        <h3>¿Quién es ese Pokémon?</h3>
+        <div class="pokemon-view">
+          <div class="sprite-wrapper">
+            <!-- La imagen del Pokémon se cargará dinámicamente -->
+            <img id="pokemonSprite" alt="pokemon" />
+          </div>
+          <div class="guess-form">
+            <input
+              type="text"
+              id="guessInput"
+              placeholder="Escribe el nombre..."
+            />
+            <button id="confirmarRespuesta">Confirmar</button>
+          </div>
+          <p id="feedback" class="feedback"></p>
+        </div>
+      </section>
+
+      <!-- Modal Pista -->
+      <div id="modalPista" class="modal">
+        <div class="modal-content">
+          <h3>Pista</h3>
+          <div id="hintContent" class="hint"></div>
+          <button class="cerrar-modal">Cerrar</button>
+        </div>
+      </div>
+
+      <!-- Modal Historial -->
+      <div id="modalHistorial" class="modal">
+        <div class="modal-content">
+          <h3>Historial de Intentos</h3>
+          <div class="history-container" id="historyContainer">
+            <!-- El historial se cargará dinámicamente -->
+          </div>
+          <button class="cerrar-modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
