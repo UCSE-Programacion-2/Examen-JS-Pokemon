@@ -1,94 +1,98 @@
-# Examen JS – Pokédex Quiz
+# ⚡ Examen: Pokédex y Batalla Pokémon con JavaScript
 
-## Objetivo
-Construir un mini-quiz: “¿Quién es ese Pokémon?” que:
-- Obtenga un Pokémon aleatorio por generación desde PokéAPI.
-- Permita ingresar el nombre y valide si es correcto.
-- Gestione puntaje e historial en `localStorage`.
-- Muestre pistas (tipos, altura, peso, primera letra).
+## 📋 Objetivo del Examen
 
-## Endpoints usados
-- `GET https://pokeapi.co/api/v2/pokemon/{id}` – Datos del Pokémon, sprite, tipos, altura y peso. Documentación: [PokéAPI](https://pokeapi.co/)
+En este examen práctico deberás desarrollar una **aplicación web interactiva de Pokédex y arena de batalla Pokémon**, conectando una interfaz frontend desarrollada con **HTML, CSS y JavaScript Vanilla** a un **servidor backend local en Node.js/Express**.
 
-## Estructura esperada del proyecto
-- `index.html`: maquetado, header con puntaje y selector de generación, acciones (Nuevo, Pista, Historial), sección de quiz con imagen, input y feedback, modales de pista e historial.
-- `css/styles.css`: estilos base, colores y tipografía “Pokemon Solid”, estados de interacción y modales.
-- `js/app.js`: implementación completa de la lógica del examen (sin librerías externas).
+La aplicación debe permitir:
 
-## Requisitos funcionales (obligatorios)
-1. Al cargar la página se debe mostrar un Pokémon aleatorio correspondiente a la generación seleccionada.
-2. El botón “Nuevo Pokémon” debe cargar otro Pokémon aleatorio de la generación actual.
-3. Al confirmar una respuesta:
-   - Si el nombre coincide exactamente con el oficial de PokéAPI (sin mayúsculas/minúsculas), sumar puntaje.
-   - Si no coincide, restar puntaje sin que baje de cero.
-   - Debe mostrarse un mensaje de feedback con el resultado.
-4. Pista debe mostrar: primera letra del nombre, tipos, altura en metros y peso en kilogramos del Pokémon actual.
-5. Historial debe listar los intentos (fecha/hora, generación, nombre real, si fue correcto y el intento ingresado), persistiendo en `localStorage`.
-6. El puntaje debe persistir en `localStorage` y reflejarse en pantalla en todo momento.
-7. Debe manejarse el estado de carga (deshabilitar acciones mientras se hace la petición) y errores de red con mensajes claros.
-
-## Requisitos técnicos
-- Usar `fetch` para consumir PokéAPI.
-- No utilizar frameworks ni librerías de JS; sólo JavaScript nativo.
-- No modificar la estructura básica de `index.html` (puedes agregar atributos necesarios, pero mantén las secciones y elementos claves).
-- Mantener estilos coherentes con la estética Pokémon provista.
-
-## Almacenamiento local
-- Clave sugerida para puntaje: `pk_score` (número entero ≥ 0).
-- Clave sugerida para historial: `pk_history` (arreglo con objetos de intento con fecha, generación, nombre real, acierto y valor ingresado).
-- Límite sugerido del historial: 50 elementos (el más reciente primero).
-
-## Selección por generación
-- El selector de generación define el rango de IDs de Pokémon a sortear. Usa rangos aproximados por generación (ejemplo Gen I: 1–151, Gen II: 152–251, etc.). Debes evitar IDs que no devuelvan sprite y reintentar si ocurre.
-
-## Validaciones y UX
-- Validar entrada vacía antes de chequear la respuesta.
-- Comparar insensible a mayúsculas/minúsculas.
-- Mantener el input enfocado al cargar un nuevo Pokémon.
-- Proveer mensajes de error entendibles ante fallos de red o datos.
-- Deshabilitar botones durante las cargas para prevenir acciones repetidas.
-
-## Accesibilidad mínima
-- Asegurar que los elementos interactivos sean alcanzables por teclado.
-- Proveer texto alternativo en la imagen del Pokémon con su nombre.
-
-## Pasos sugeridos de implementación
-1. Preparación del estado: puntaje actual, Pokémon actual, bandera de carga.
-2. Lectura inicial desde `localStorage` y sincronización del puntaje con la UI.
-3. Cálculo del rango de IDs en función de la generación seleccionada.
-4. Obtención de un ID aleatorio dentro del rango y solicitud a PokéAPI.
-5. Manejo de reintentos si el sprite no está disponible.
-6. Renderizado de la imagen y reseteo del input/feedback.
-7. Verificación de la respuesta y actualización de puntaje/historial.
-8. Renderizado del historial en el modal correspondiente.
-9. Cálculo y presentación de la pista en el modal correspondiente.
-10. Manejo de errores y estados de deshabilitado de botones.
-
-## Criterios de evaluación (rúbrica)
-- Correctitud funcional del flujo principal (nuevo Pokémon, responder, puntaje, pista, historial).
-- Uso adecuado de `fetch` y manejo de errores de red.
-- Persistencia correcta en `localStorage` y sincronización con la UI.
-- Estructura del código: funciones claras, nombres descriptivos y bajo acoplamiento.
-- Accesibilidad y UX básica (focus, mensajes, deshabilitado de acciones durante carga).
-- Calidad visual consistente con los estilos del proyecto.
-
-## Pruebas manuales mínimas
-- Cambiar de generación y verificar que los Pokémon coincidan con el rango esperado.
-- Forzar varios “Nuevo Pokémon” para validar reintentos ante sprites faltantes.
-- Ingresar respuesta correcta e incorrecta y observar cambios en feedback y puntaje.
-- Refrescar la página y confirmar persistencia del puntaje e historial.
-- Abrir los modales de Pista e Historial y verificar su contenido.
-
-## Bonificaciones (opcionales)
-- Normalizar entradas del usuario (trimming, manejo de espacios, tolerar guiones).
-- Modo contrarreloj o límite de intentos por Pokémon.
-- Sonidos o animaciones sutiles al acertar o errar.
-- Soporte de nombres en otro idioma con una estrategia clara de validación.
-
-## Entrega
-- Implementa toda la solución en `js/app.js` sin fragmentos de código en este `readme.md`.
-- No se aceptan librerías externas de JS.
-- Asegúrate de que el proyecto se abra correctamente en un servidor estático y que la PokéAPI responda.
+1. Consultar el listado de Pokémon y sus tipos elementales desde el servidor backend local (`/api/pokemon` o `/api/tipos`).
+2. Filtrar Pokémon por nombre (búsqueda en tiempo real) y por tipo elemental (Fuego, Agua, Planta, Eléctrico, etc.).
+3. Renderizar las tarjetas de los Pokémon en el DOM con sus estadísticas clave (nombre, tipo, HP, Ataque, Defensa, imagen).
+4. Permitir seleccionar dos Pokémon para simular una batalla por turnos o por puntos de combate (CP / Ataque vs Defensa).
+5. Persistir el historial de batallas ganadas en el navegador mediante `localStorage` y permitir su limpieza interactiva.
 
 ---
-Créditos: Datos provistos por [PokéAPI](https://pokeapi.co/).
+
+## 📌 Tabla de Entregas / Issues de GitHub
+
+Cada entrega se corresponde con un **issue automático** en tu repositorio de GitHub. Para cerrar cada issue automáticamente, incluye el commit sugerido exacto al subir tu solución a la rama principal (`main`).
+
+| Entrega | Tarea a Realizar                                                                                                  | Commit Sugerido                                                         |
+| :------ | :---------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+| **#1**  | Vincular `css/styles.css` y `js/script.js` en `index.html`.                                                       | `feat(html): vincular css y script js al html`                          |
+| **#2**  | Consumir la API local (`/api/pokemon`) usando `fetch` y `async/await`.                                            | `feat(js): consumir api de pokemon con fetch y async await`             |
+| **#3**  | Renderizar dinámicamente las tarjetas de Pokémon y poblar el filtro de tipos en el DOM.                           | `feat(js): renderizar tarjetas de pokemon y filtros en el dom`          |
+| **#4**  | Implementar filtrado en tiempo real y la arena de combate entre 2 Pokémon.                                        | `feat(js): implementar filtrado y arena de batalla pokemon`             |
+| **#5**  | Persistir las batallas en `localStorage`, mostrar el historial y permitir su limpieza con `#btnLimpiarHistorial`. | `feat(js): persistir y gestionar historial de batallas en localstorage` |
+
+---
+
+## 🛠️ Especificación Técnica y Requerimientos
+
+### 1. Servidor Backend Local
+
+El servidor Express provisto corre en el puerto `3000` con CORS habilitado:
+
+- **`GET http://localhost:3000/api/pokemon`**: Devuelve la lista completa de Pokémon con sus estadísticas e imágenes.
+- **`GET http://localhost:3000/api/tipos`**: Devuelve la lista de tipos elementales.
+
+Para iniciar el servidor backend:
+
+```bash
+npm start
+```
+
+### 2. Elementos Clave del DOM
+
+- **`#inputBusqueda`**: Input de texto para filtrar Pokémon por nombre.
+- **`#filtroTipo`**: `<select>` para filtrar por tipo elemental.
+- **`#pokedexGrid`**: Contenedor donde se insertan las tarjetas de Pokémon (`.pokemon-card`).
+- **`#pokemon1`** y **`#pokemon2`**: Selectores para elegir los contrincantes.
+- **`#btnPelear`**: Botón para simular el duelo y determinar al ganador según la fórmula de poder `(ataque + hp - defensa)`.
+- **`#resultadoBatalla`**: Contenedor donde se muestra el resultado.
+- **`#historialLista`**: Lista `<ul>` donde se registran las batallas guardadas.
+- **`#btnLimpiarHistorial`**: Botón para vaciar el historial en `localStorage`.
+
+### 3. Almacenamiento Local (`localStorage`)
+
+- **Clave obligatoria**: `'pokedex_batallas'`
+- **Estructura**: Arreglo de objetos con `{ pokemon1, pokemon2, ganador, fecha }`.
+- Utilizar `JSON.stringify()` para guardar y `JSON.parse()` para leer.
+
+---
+
+## 🧪 Comandos de Prueba y Autoevaluación
+
+Antes de entregar, podés autoevaluar tu trabajo localmente:
+
+```bash
+# Ejecutar todas las pruebas automáticas
+npm test
+
+# Ejecutar una prueba individual
+npm run test:link
+npm run test:fetch
+npm run test:render
+npm run test:events
+npm run test:storage
+
+# Validar estilo y calidad de código
+npm run lint
+npm run format:check
+```
+
+---
+
+## 🚀 Instrucciones para la Ejecución Local
+
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Iniciar el servidor local:
+   ```bash
+   npm start
+   ```
+3. Abrir `index.html` en el navegador (usando la extensión **Live Server** de VS Code).
+4. Abrir la consola de herramientas de desarrollador (**F12**) para verificar peticiones de red y depurar posibles errores.

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "nombre": "Bulbasaur",
+    "generacion": 1,
+    "tipos": ["Planta", "Veneno"],
+    "altura": 0.7,
+    "peso": 6.9,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    "primeraLetra": "B"
+  },
+  {
+    "id": 4,
+    "nombre": "Charmander",
+    "generacion": 1,
+    "tipos": ["Fuego"],
+    "altura": 0.6,
+    "peso": 8.5,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+    "primeraLetra": "C"
+  },
+  {
+    "id": 7,
+    "nombre": "Squirtle",
+    "generacion": 1,
+    "tipos": ["Agua"],
+    "altura": 0.5,
+    "peso": 9.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+    "primeraLetra": "S"
+  },
+  {
+    "id": 25,
+    "nombre": "Pikachu",
+    "generacion": 1,
+    "tipos": ["Eléctrico"],
+    "altura": 0.4,
+    "peso": 6.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    "primeraLetra": "P"
+  },
+  {
+    "id": 150,
+    "nombre": "Mewtwo",
+    "generacion": 1,
+    "tipos": ["Psíquico"],
+    "altura": 2.0,
+    "peso": 122.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png",
+    "primeraLetra": "M"
+  },
+  {
+    "id": 152,
+    "nombre": "Chikorita",
+    "generacion": 2,
+    "tipos": ["Planta"],
+    "altura": 0.9,
+    "peso": 6.4,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/152.png",
+    "primeraLetra": "C"
+  },
+  {
+    "id": 155,
+    "nombre": "Cyndaquil",
+    "generacion": 2,
+    "tipos": ["Fuego"],
+    "altura": 0.5,
+    "peso": 7.9,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/155.png",
+    "primeraLetra": "C"
+  },
+  {
+    "id": 158,
+    "nombre": "Totodile",
+    "generacion": 2,
+    "tipos": ["Agua"],
+    "altura": 0.6,
+    "peso": 9.5,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/158.png",
+    "primeraLetra": "T"
+  },
+  {
+    "id": 249,
+    "nombre": "Lugia",
+    "generacion": 2,
+    "tipos": ["Psíquico", "Volador"],
+    "altura": 5.2,
+    "peso": 216.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/249.png",
+    "primeraLetra": "L"
+  },
+  {
+    "id": 252,
+    "nombre": "Treecko",
+    "generacion": 3,
+    "tipos": ["Planta"],
+    "altura": 0.5,
+    "peso": 5.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/252.png",
+    "primeraLetra": "T"
+  },
+  {
+    "id": 255,
+    "nombre": "Torchic",
+    "generacion": 3,
+    "tipos": ["Fuego"],
+    "altura": 0.4,
+    "peso": 2.5,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/255.png",
+    "primeraLetra": "T"
+  },
+  {
+    "id": 258,
+    "nombre": "Mudkip",
+    "generacion": 3,
+    "tipos": ["Agua"],
+    "altura": 0.4,
+    "peso": 7.6,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/258.png",
+    "primeraLetra": "M"
+  },
+  {
+    "id": 384,
+    "nombre": "Rayquaza",
+    "generacion": 3,
+    "tipos": ["Dragón", "Volador"],
+    "altura": 7.0,
+    "peso": 206.5,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png",
+    "primeraLetra": "R"
+  },
+  {
+    "id": 448,
+    "nombre": "Lucario",
+    "generacion": 4,
+    "tipos": ["Lucha", "Acero"],
+    "altura": 1.2,
+    "peso": 54.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+    "primeraLetra": "L"
+  },
+  {
+    "id": 493,
+    "nombre": "Arceus",
+    "generacion": 4,
+    "tipos": ["Normal"],
+    "altura": 3.2,
+    "peso": 320.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png",
+    "primeraLetra": "A"
+  },
+  {
+    "id": 658,
+    "nombre": "Greninja",
+    "generacion": 6,
+    "tipos": ["Agua", "Siniestro"],
+    "altura": 1.5,
+    "peso": 40.0,
+    "imagen": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+    "primeraLetra": "G"
+  }
+]
